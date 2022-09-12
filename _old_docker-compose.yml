@@ -1,0 +1,43 @@
+version: '3.1'
+
+services:
+	serv_api_gateway:
+		container_name: serv_api_gateway
+		image: yamurillo/apigateway
+		build:
+			context: .
+			dockerfile: ApiGateway/Dockerfile
+		ports:
+			- 9000:9000
+		networks:
+			- init_net
+			- public_net
+
+	serv_api_identity:
+		container_name: serv_api_identity
+		image: yamurillo/apiidentity
+		build:
+			context: .
+			dockerfile: Services.UserManage/Dockerfile
+		ports:
+			- 9001:9001
+		networks:
+			- init_net
+
+	serv_api_identity:
+		container_name: serv_api_identity
+		image: yamurillo/apiidentity
+		build:
+			context: .
+			dockerfile: Services.UserManage/Dockerfile
+		ports:
+				- 9001:9001
+		networks:
+			- init_net			
+
+networks:
+	init_net:
+		driver: overlay
+		internal: true
+	public_net:
+		driver: bridge

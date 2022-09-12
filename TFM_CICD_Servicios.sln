@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{F9282A5C-F138-4C62-86FC-6A6C5A47687D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.UserManager", "Services.UserManager\Services.UserManager.csproj", "{87CF0944-DAAA-48E3-8306-1815855A79FE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataManagement.Common", "DataManagement.Common\DataManagement.Common\DataManagement.Common.csproj", "{3D2C54BF-A271-47D8-8251-04F1C75FC1FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{737ACEDB-2241-490D-B65B-811A0FF4A70E}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZMEJ", "ZMEJ\ZMEJ.csproj", "{9A61901B-204A-4D16-8DF2-E08E117A0B39}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGatewayZMEJ", "ApiGatewayZMEJ\ApiGatewayZMEJ.csproj", "{C529A95E-701A-4BD7-B697-1198F2868241}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87CF0944-DAAA-48E3-8306-1815855A79FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87CF0944-DAAA-48E3-8306-1815855A79FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87CF0944-DAAA-48E3-8306-1815855A79FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87CF0944-DAAA-48E3-8306-1815855A79FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D2C54BF-A271-47D8-8251-04F1C75FC1FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D2C54BF-A271-47D8-8251-04F1C75FC1FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D2C54BF-A271-47D8-8251-04F1C75FC1FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D2C54BF-A271-47D8-8251-04F1C75FC1FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A61901B-204A-4D16-8DF2-E08E117A0B39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A61901B-204A-4D16-8DF2-E08E117A0B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A61901B-204A-4D16-8DF2-E08E117A0B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A61901B-204A-4D16-8DF2-E08E117A0B39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C529A95E-701A-4BD7-B697-1198F2868241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C529A95E-701A-4BD7-B697-1198F2868241}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C529A95E-701A-4BD7-B697-1198F2868241}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C529A95E-701A-4BD7-B697-1198F2868241}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{87CF0944-DAAA-48E3-8306-1815855A79FE} = {F9282A5C-F138-4C62-86FC-6A6C5A47687D}
+		{9A61901B-204A-4D16-8DF2-E08E117A0B39} = {F9282A5C-F138-4C62-86FC-6A6C5A47687D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92E062C7-3A53-43E2-A0D0-4433B15E67E9}
+	EndGlobalSection
+EndGlobal

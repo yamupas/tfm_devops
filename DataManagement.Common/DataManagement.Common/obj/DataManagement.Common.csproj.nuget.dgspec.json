@@ -1,0 +1,103 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/yulianmurillo/Documents/Unir/TFM/Servicios/tfm_services/DataManagement.Common/DataManagement.Common/DataManagement.Common.csproj": {}
+  },
+  "projects": {
+    "/Users/yulianmurillo/Documents/Unir/TFM/Servicios/tfm_services/DataManagement.Common/DataManagement.Common/DataManagement.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/yulianmurillo/Documents/Unir/TFM/Servicios/tfm_services/DataManagement.Common/DataManagement.Common/DataManagement.Common.csproj",
+        "projectName": "DataManagement.Common",
+        "projectPath": "/Users/yulianmurillo/Documents/Unir/TFM/Servicios/tfm_services/DataManagement.Common/DataManagement.Common/DataManagement.Common.csproj",
+        "packagesPath": "/Users/yulianmurillo/.nuget/packages/",
+        "outputPath": "/Users/yulianmurillo/Documents/Unir/TFM/Servicios/tfm_services/DataManagement.Common/DataManagement.Common/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/yulianmurillo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "Microsoft.AspNetCore": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Microsoft.AspNetCore.Hosting": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[5.4.0, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.18, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Npgsql.ConfigureConnection": {
+              "target": "Package",
+              "version": "[0.1.1, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[5.4.0, )"
+            },
+            "Xam.Plugins.Messaging": {
+              "target": "Package",
+              "version": "[5.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.301/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{87CF0944-DAAA-48E3-8306-1815855A79FE}|Default">
+  <MonoDevelop.Ide.ItemProperties.Services.Services.Notification PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="ApiGateway/Startup.cs" Line="68" Column="37" />
+      <File FileName="ZMEJ/Controllers/DefaultController.cs" Line="1" Column="1" />
+      <File FileName="ZMEJ/appsettings.json" Line="2" Column="40" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TFM_CICD_Servicios" expanded="True" selected="True" />
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ApiGateway PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Services.Services.UserManager PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>

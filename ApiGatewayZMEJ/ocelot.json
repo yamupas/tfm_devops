@@ -1,0 +1,472 @@
+﻿{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/account/loginApp",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_identity",
+          "Port": 9001
+        }
+      ],
+      "UpstreamPathTemplate": "/identity.api/auth",
+      "UpstreamHttpMethod": [ "Post" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "5s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      },
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/account/refreshtokenApp",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_identity",
+          "Port": 9001
+        }
+      ],
+      "UpstreamPathTemplate": "/identity.api/refreshtoken",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/users/getAll",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_identity",
+          "Port": 9001
+        }
+      ],
+      "UpstreamPathTemplate": "/identity.api/users/getAll",
+      "UpstreamHttpMethod": [ "get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/account/logout",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_identity",
+          "Port": 9001
+        }
+      ],
+      "UpstreamPathTemplate": "/identity.api/logout",
+      "UpstreamHttpMethod": [ "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/OrderZMEJ/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_zmej",
+          "Port": 9005
+        }
+      ],
+      "UpstreamPathTemplate": "/ZMEJ.api/OrderZMEJ/{everything}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiSecurity",
+        "AllowedScopes": []
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "5s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      },
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "DownstreamPathTemplate": "/api/OrderZMEJ/FilterOrder",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_zmej",
+          "Port": 9005
+        }
+      ],
+      "UpstreamPathTemplate": "/ZMEJ.api/OrderZMEJ/FilterOrder",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiSecurity",
+        "AllowedScopes": []
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "5s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      },
+      "FileCacheOptions": { "TtlSeconds": 30 }
+    },
+    {
+      "DownstreamPathTemplate": "/api/clasificacion/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_zmej",
+          "Port": 9005
+        }
+      ],
+      "UpstreamPathTemplate": "/ZMEJ.api/clasificacion/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiSecurity",
+        "AllowedScopes": []
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/ClaseDeActividad/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_zmej",
+          "Port": 9005
+        }
+      ],
+      "UpstreamPathTemplate": "/ZMEJ.api/clasedeactividad/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiSecurity",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/NormaDeLiquidacion/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_zmej",
+          "Port": 9005
+        }
+      ],
+      "UpstreamPathTemplate": "/ZMEJ.api/NormaDeLiquidacion/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiSecurity",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/OrderZMEJ/UpdateOM",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_zmej",
+          "Port": 9005
+        }
+      ],
+      "UpstreamPathTemplate": "/ZMEJ.api/OrderZMEJ/UpdateOM",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiSecurity",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/OrderZMEJ/classification",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_zmej",
+          "Port": 9005
+        }
+      ],
+      "UpstreamPathTemplate": "/ZMEJ.api/OrderZMEJ/classification",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiSecurity",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/StatusCode/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_zmej",
+          "Port": 9005
+        }
+      ],
+      "UpstreamPathTemplate": "/ZMEJ.api/StatusCode/{everything}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiSecurity",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/pasotpm/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_zmej",
+          "Port": 9005
+        }
+      ],
+      "UpstreamPathTemplate": "/ZMEJ.api/pasotpm/{everything}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiSecurity",
+        "AllowedScopes": []
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/ResCtrlProduccion/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_zmej",
+          "Port": 9005
+        }
+      ],
+      "UpstreamPathTemplate": "/ZMEJ.api/ResCtrlProduccion/{everything}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiSecurity",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/ResCtrlProduccion/save",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_zmej",
+          "Port": 9005
+        }
+      ],
+      "UpstreamPathTemplate": "/ZMEJ.api/ResCtrlProduccion/save",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiSecurity",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/ResCtrlProduccion/update",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_zmej",
+          "Port": 9005
+        }
+      ],
+      "UpstreamPathTemplate": "/ZMEJ.api/resCtrlProduccion/update",
+      "UpstreamHttpMethod": [ "PUT", "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiSecurity",
+        "AllowedScopes": []
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/grupoPlanificador/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_zmej",
+          "Port": 9005
+        }
+      ],
+      "UpstreamPathTemplate": "/ZMEJ.api/grupoPlanificador/{everything}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiSecurity",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/grupoPlanificador/save",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_zmej",
+          "Port": 9005
+        }
+      ],
+      "UpstreamPathTemplate": "/ZMEJ.api/grupoPlanificador/save",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiSecurity",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/grupoPlanificador/update",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_zmej",
+          "Port": 9005
+        }
+      ],
+      "UpstreamPathTemplate": "/ZMEJ.api/grupoPlanificador/update",
+      "UpstreamHttpMethod": [ "PUT", "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiSecurity",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/ubicacionTecnica/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_zmej",
+          "Port": 9005
+        }
+      ],
+      "UpstreamPathTemplate": "/ZMEJ.api/ubicacionTecnica/{everything}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiSecurity",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/ubicacionTecnica/save",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_zmej",
+          "Port": 9005
+        }
+      ],
+      "UpstreamPathTemplate": "/ZMEJ.api/ubicacionTecnica/save",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiSecurity",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/ubicacionTecnica/update",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_zmej",
+          "Port": 9005
+        }
+      ],
+      "UpstreamPathTemplate": "/ZMEJ.api/ubicacionTecnica/update",
+      "UpstreamHttpMethod": [ "PUT", "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiSecurity",
+        "AllowedScopes": []
+      }
+    },
+    //puesto de trabajo
+    {
+      "DownstreamPathTemplate": "/api/puestodetrabajo/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_zmej",
+          "Port": 9005
+        }
+      ],
+      "UpstreamPathTemplate": "/ZMEJ.api/puestodetrabajo/{everything}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiSecurity",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/puestodetrabajo/save",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_zmej",
+          "Port": 9005
+        }
+      ],
+      "UpstreamPathTemplate": "/ZMEJ.api/puestodetrabajo/save",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiSecurity",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/puestodetrabajo/update",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_zmej",
+          "Port": 9005
+        }
+      ],
+      "UpstreamPathTemplate": "/ZMEJ.api/puestodetrabajo/update",
+      "UpstreamHttpMethod": [ "PUT", "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiSecurity",
+        "AllowedScopes": []
+      }
+    },
+
+
+    //maquinas
+    {
+      "DownstreamPathTemplate": "/api/maquinas/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_zmej",
+          "Port": 9005
+        }
+      ],
+      "UpstreamPathTemplate": "/ZMEJ.api/maquinas/{everything}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiSecurity",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/maquinas/save",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_zmej",
+          "Port": 9005
+        }
+      ],
+      "UpstreamPathTemplate": "/ZMEJ.api/maquinas/save",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiSecurity",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/maquinas/update",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "serv_api_zmej",
+          "Port": 9005
+        }
+      ],
+      "UpstreamPathTemplate": "/ZMEJ.api/maquinas/update",
+      "UpstreamHttpMethod": [ "PUT", "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "ApiSecurity",
+        "AllowedScopes": []
+      }
+    }
+
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:9000"
+  }
+}

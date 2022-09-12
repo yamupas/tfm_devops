@@ -1,0 +1,87 @@
+{
+  "menu": [
+    {
+      "route": "dashboard",
+      "name": "dashboard",
+      "type": "link",
+      "icon": "dashboard"
+    },
+    {
+      "route": "ordenes",
+      "name": "ordenes",
+      "type": "sub",
+      "icon": "color_lens",
+      "children": [
+        {
+          "route": "create-zmej",
+          "name": "create-zmej",
+          "type": "link"
+        },
+        {
+          "route": "zmej",
+          "name": "zmej",
+          "type": "link"
+        },
+        {
+          "route": "my_orders",
+          "name": "my_orders",
+          "type": "link"
+        }
+      ]
+    },
+    {
+      "route": "maestras",
+      "name": "maestras",
+      "type": "sub",
+      "icon": "color_lens",
+      "children": [
+        {
+          "route": "pets",
+          "name": "pets",
+          "type": "link"
+        },
+        {
+          "route": "maquinas",
+          "name": "maquinas",
+          "type": "link"
+        },
+        {
+          "route": "estados",
+          "name": "estados",
+          "type": "link"
+        },
+        {
+          "route": "clasificacion",
+          "name": "clasificacion",
+          "type": "link"
+        },
+        {
+          "route": "lineas",
+          "name": "lineas",
+          "type": "link"
+        },
+        {
+          "route": "hornos",
+          "name": "hornos",
+          "type": "link"
+        },
+        {
+          "route": "ubicaciontecnica",
+          "name": "ubicaciontecnica",
+          "type": "link"
+        },
+        {
+          "route": "pstotbjo",
+          "name": "pstotbjo",
+          "type": "link"
+        }
+
+      ]
+    },
+    {
+      "route": "usuarios",
+      "name": "users",
+      "type": "link"
+    }
+  ]
+}

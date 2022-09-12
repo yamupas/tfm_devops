@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\yulia\OneDrive\Documentos\UNIR\Maestria\TFM\CICD\TFM_CICD_Servicios\Services.UserManager\bin\Release\netcoreapp3.1\publish\</_PublishTargetUrl>
+    <History>True|2022-06-28T02:53:10.3325606Z;</History>
+  </PropertyGroup>
+</Project>

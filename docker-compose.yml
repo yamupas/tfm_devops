@@ -1,0 +1,85 @@
+version: '3.1'
+
+services:
+
+  zmej_app:
+    container_name: zmej_app
+    image: yamurillo/zmej_app
+    ports:
+      - 8089:81
+      - 8090:80      
+    build:
+      context: .
+      dockerfile: Frontend/Dockerfile
+    networks:
+      - init_net
+      - public_net
+    volumes:
+      - zmej_data:/usr/share/nginx/html
+
+  serv_api_gateway:
+    container_name: serv_api_gateway
+    image: yamurillo/apigateway
+    ports:
+      - 9000:9000
+    build:
+      context: .
+      dockerfile: ApiGatewayZMEJ/Dockerfile
+    networks:
+      - init_net
+      - public_net
+
+  serv_api_identity:
+    container_name: serv_api_identity
+    image: yamurillo/apiidentity
+    ports:
+      - 9001:9001
+    build: 
+      context: .
+      dockerfile: Services.UserManager/Dockerfile
+    networks:
+      - init_net
+    depends_on:
+      - db_sqlserver
+ #   volumes:
+ #     - sqlvolume:/var/opt/mssql
+
+  serv_api_zmej:
+    container_name: serv_api_zmej
+    image: yamurillo/serv_api_zmej
+    ports:
+      - 9005:9005
+    build: 
+      context: .
+      dockerfile: ZMEJ/Dockerfile
+    networks:
+      - init_net
+    depends_on:
+            - db_sqlserver
+
+  db_sqlserver:
+    container_name: db_sqlserver
+    image: "mcr.microsoft.com/mssql/server" 
+    ports:
+      - 1433:1433
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: ftm2022.
+      MSSQL_PID: Express
+    restart: unless-stopped
+    volumes:
+      - sqlserver-data:/var/opt/mssql
+    networks:
+      - init_net
+
+networks:
+  init_net:
+    #driver: overlay
+    driver: bridge
+    #internal: true
+  public_net:
+    driver: bridge
+
+volumes:
+  zmej_data:
+  sqlserver-data:
