@@ -6,8 +6,8 @@ services:
     container_name: zmej_app
     image: yamurillo/zmej_app
     ports:
-      - 8089:81
-      - 8090:80      
+      - 81:81
+      - 80:80      
     build:
       context: .
       dockerfile: Frontend/Dockerfile
