@@ -1,13 +1,13 @@
 ## Angular ##
 # compiled output
-**/Frontend/Mejoras
+**/Frontend/Mejoras/
 **/ApiGateway/bin
 **/ApiGateway/obj
 **/Services.UserManager/bin
 **/Services.UserManager/obj
 **/ZMEJ/bin
 **/ZMEJ/obj
-
+ApiGatewayZMEJ/
 dist/
 tmp/
 app/**/*.js
