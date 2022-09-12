@@ -21,5 +21,12 @@
 **/obj
 **/secrets.dev.yaml
 **/values.dev.yaml
+**/Frontend/Mejoras/node_modules
+**/ApiGateway/bin
+**/ApiGateway/obj
+**/Services.UserManager/bin
+**/Services.UserManager/obj
+**/ZMEJ/bin
+**/ZMEJ/obj
 LICENSE
 README.md
